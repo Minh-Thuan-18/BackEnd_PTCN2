@@ -4,7 +4,7 @@ const userController = require('../components/Controller');
 const {checkRegister} = require('../Vadilate/Vadilate');
 
 
-//http://localhost:3000/API/user/login
+//http://localhost:3000/users/login
 router.post('/login', async(req, res, next)=>{
     try {
       const {email, password} = req.body;

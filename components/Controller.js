@@ -11,9 +11,11 @@ const login = async (email, password) => {
 
 const register = async (email, password, masv) => {
     try {
-        return await userService.register(email, password, masv);
+        const result =await userService.register(email, password, masv);
+        console.log("-------------",result);
+        return result;
     } catch (error) {
-        console.log('Register controller login error: ', error);
+        return  console.log('Register controller login error: ', error);
     }
 }
 const changePassword = async (email, password, newPassword) => {

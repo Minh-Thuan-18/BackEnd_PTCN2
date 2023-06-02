@@ -7,11 +7,7 @@ const schema = new Schema({
     id: { type: ObjectId},
     masv: { type: String},
     email: {type: String, require: true, unique: true},
-    password: { type: String, require: true},
-    otp: {
-          type: String,
-          required: true
-        }
+    password: { type: String, require: true}
 });
 
 module.exports =mongoose.models.user || mongoose.model('user', schema);
